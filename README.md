@@ -58,7 +58,10 @@ Wikimedia Foundations' API can be found here: https://doc.wikimedia.org/generate
 
 ## Data Source
 This project uses the file `rare-diseased_cleaned.AUG.2024.csv` as the source for articles to pull from the
-Wikimedia API.
+Wikimedia API. This file was provided by Dr. David W. McDonald from 
+University of Washington's Department of Human Centered Design & Engineering and was collected by using a database
+of rare diseases provided by the [National Organization for Rare Diseases (NORD)](https://rarediseases.org/) and
+matching them to the Wikipedia articles.
 
 The project uses the `disease` column as the article title in the API pull. In the event that the `disease` is
 invalid or the API does not return the anticipated data, the disease is skipped and no page view data is collected
