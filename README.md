@@ -10,9 +10,9 @@ There are three goals for this project:
    1. Monthly mobile page views
    2. Monthly desktop page views
    3. Monthly cumulative views
-2. Conduct a basic visual analysis on the timeseries data examining:
+3. Conduct a basic visual analysis on the timeseries data examining:
    1. Article pages with the highest and lowest page requests for desktop and mobile access.
-   2. Article pages with the largest peak page views over the entire time series by access type.
+   2. Top 10 article pages with the largest peak page views over the entire time series by access type.
    3. Article pages that have the fewest months of data by access type.
 
 
@@ -62,10 +62,10 @@ Wikimedia API.
 
 The project uses the `disease` column as the article title in the API pull. In the event that the `disease` is
 invalid or the API does not return the anticipated data, the disease is skipped and no page view data is collected
-on that disease.
+on that disease/page.
 
 
-__The notebook generates three files which are stored in the data folder.__
+The notebook generates three data files which are stored in the data folder.
 1. rare-disease_monthly_cumulative
    1. Page view data containing view counts from both desktop and mobile devices.
 2. rare-disease_monthly_desktop
@@ -103,3 +103,14 @@ An example of the three files' schema:
 }
 ```
 
+## Outputs
+This project generates a total of six files.
+Three of which are json datasets of article page view data which are described above.
+
+The other remaining three being time series figures corresponding to the third goal of basic visual analysis.
+- Article pages with the highest and lowest page requests for desktop and mobile access -> `max_min_avg_views_articles.png`
+![max_min_avg_views_articles.png](figures%2Fmax_min_avg_views_articles.png)
+- Top 10 article pages with the largest peak page views over the entire time series by access type -> `top10_articles_peak_views.png`
+![top10_articles_peak_views.png](figures%2Ftop10_articles_peak_views.png)
+- Article pages that have the fewest months of data by access type -> `fewest_months_articles.png`
+![fewest_months_articles.png](figures%2Ffewest_months_articles.png)
