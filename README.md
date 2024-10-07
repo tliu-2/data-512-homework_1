@@ -2,8 +2,8 @@
 This notebook constructs and analyzes a dataset from monthly article traffic data for a subset of pages on 
 rare diseases from English Wikipedia through the Wikimedia API. 
 
-There are two primary goals for this project:
-1. Create a repository, code, and analysis which focuses on implementing the best practices outlined in
+There are three goals for this project:
+1. Create a repository, code, and analysis which focuses on implementing the best practices described in
    ["Assessing Reproducibility"](http://www.practicereproducibleresearch.org/core-chapters/2-assessment.html)
    and ["The Basic Reproducible Workflow Template"](http://www.practicereproducibleresearch.org/core-chapters/3-basic.html).
 2. Construct 3 separate datasets corresponding to:
@@ -32,18 +32,18 @@ listed here:
 The repository is divided into two folders:
 ```bash
 data-512-homework_1
-├── construct_and_analyze_rare_diseases_view_data.ipynb
 ├── data
-|   ├── rare-disease_cleaned.AUG.2024.csv
-|   ├── rare-disease_monthly_cumulative_2015010100-2024093000.json
-|   ├── rare-disease_monthly_desktop_2015010100-2024093000.json
-|   └── rare-disease_monthly_mobile_2015010100-2024093000.json
+│   ├── rare-disease_cleaned.AUG.2024.csv
+│   ├── rare-disease_monthly_cumulative_2015010100-2024093000.json
+│   ├── rare-disease_monthly_desktop_2015010100-2024093000.json
+│   └── rare-disease_monthly_mobile_2015010100-2024093000.json
 ├── figures
-|   ├── fewest_months_articles.png
-|   ├── max_min_avg_views_articles.png
-|   └── top10_articles_peak_views.png
+│   ├── fewest_months_articles.png
+│   ├── max_min_avg_views_articles.png
+│   └── top10_articles_peak_views.png
 ├── LICENSE
-└── README.md
+├── README.md
+└── construct_and_analyze_rare_diseases_view_data.ipynb
 ```
 
 ## Data Source Information and Disclosures
