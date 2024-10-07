@@ -109,8 +109,5 @@ Three of which are json datasets of article page view data which are described a
 
 The other remaining three being time series figures corresponding to the third goal of basic visual analysis.
 - Article pages with the highest and lowest page requests for desktop and mobile access -> `max_min_avg_views_articles.png`
-![max_min_avg_views_articles.png](figures%2Fmax_min_avg_views_articles.png)
 - Top 10 article pages with the largest peak page views over the entire time series by access type -> `top10_articles_peak_views.png`
-![top10_articles_peak_views.png](figures%2Ftop10_articles_peak_views.png)
 - Article pages that have the fewest months of data by access type -> `fewest_months_articles.png`
-![fewest_months_articles.png](figures%2Ffewest_months_articles.png)
