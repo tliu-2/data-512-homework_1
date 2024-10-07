@@ -1,17 +1,52 @@
 # DATA 512 Homework 1
- 
 This notebook constructs and analyzes a dataset from monthly article traffic data for a subset of pages on 
 rare diseases from English Wikipedia through the Wikimedia API. 
 
 There are two primary goals for this project:
-1. Construct 3 separate datasets corresponding to:
+1. Create a repository, code, and analysis which focuses on implementing the best practices outlined in
+   ["Assessing Reproducibility"](http://www.practicereproducibleresearch.org/core-chapters/2-assessment.html)
+   and ["The Basic Reproducible Workflow Template"](http://www.practicereproducibleresearch.org/core-chapters/3-basic.html).
+2. Construct 3 separate datasets corresponding to:
    1. Monthly mobile page views
    2. Monthly desktop page views
    3. Monthly cumulative views
 2. Conduct a basic visual analysis on the timeseries data examining:
    1. Article pages with the highest and lowest page requests for desktop and mobile access.
    2. Article pages with the largest peak page views over the entire time series by access type.
-   3. Article pages that have the fewest months of data.
+   3. Article pages that have the fewest months of data by access type.
+
+
+## Dependencies
+For replication and reproduction of this data set construction and analysis, the Python version and packages are
+listed here:
+
+- Python 3.10.11
+- Jupyter 1.1.1
+- Polars 1.9.0
+- Pandas 2.2.3
+- Pyarrow 17.0.0
+- Numpy 2.1.1
+- Matplotlib 3.9.2
+
+## Folder Structure:
+The repository is divided into two folders:
+```bash
+data-512-homework_1
+├── construct_and_analyze_rare_diseases_view_data.ipynb
+├── data
+|   ├── rare-disease_cleaned.AUG.2024.csv
+|   ├── rare-disease_monthly_cumulative_2015010100-2024093000.json
+|   ├── rare-disease_monthly_desktop_2015010100-2024093000.json
+|   └── rare-disease_monthly_mobile_2015010100-2024093000.json
+├── figures
+|   ├── fewest_months_articles.png
+|   ├── max_min_avg_views_articles.png
+|   └── top10_articles_peak_views.png
+├── LICENSE
+└── README.md
+```
+
+## Data Source Information and Disclosures
 
 Wikimedia's data is provided under the [CC0 1.0 License](https://creativecommons.org/publicdomain/zero/1.0/).
 Abiding by Wikimedia Foundations' [terms of use](https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use),
@@ -21,13 +56,16 @@ is a conflict of interest.
 
 Wikimedia Foundations' API can be found here: https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/.
 
-This project uses the file rare-diseased_cleaned.AUG.2024.csv as the source for articles to pull from the
+## Data Source
+This project uses the file `rare-diseased_cleaned.AUG.2024.csv` as the source for articles to pull from the
 Wikimedia API.
+
 The project uses the `disease` column as the article title in the API pull. In the event that the `disease` is
 invalid or the API does not return the anticipated data, the disease is skipped and no page view data is collected
 on that disease.
 
-__The notebook generates three files:__
+
+__The notebook generates three files which are stored in the data folder.__
 1. rare-disease_monthly_cumulative
    1. Page view data containing view counts from both desktop and mobile devices.
 2. rare-disease_monthly_desktop
@@ -65,14 +103,3 @@ An example of the three files' schema:
 }
 ```
 
-## Python Version and Packages
-For replication and reproduction of this data set construction and analysis, the Python version and packages are
-listed here:
-
-- Python 3.10.11 
-- Jupyter 1.1.1 
-- Polars 1.9.0 
-- Pandas 2.2.3
-- Pyarrow 17.0.0
-- Numpy 2.1.1
-- Matplotlib 3.9.2
