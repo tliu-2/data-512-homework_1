@@ -23,6 +23,9 @@ Wikimedia Foundations' API can be found here: https://doc.wikimedia.org/generate
 
 This project uses the file rare-diseased_cleaned.AUG.2024.csv as the source for articles to pull from the
 Wikimedia API.
+The project uses the `disease` column as the article title in the API pull. In the event that the `disease` is
+invalid or the API does not return the anticipated data, the disease is skipped and no page view data is collected
+on that disease.
 
 __The notebook generates three files:__
 1. rare-disease_monthly_cumulative
@@ -69,6 +72,7 @@ listed here:
 - Python 3.10.11 
 - Jupyter 1.1.1 
 - Polars 1.9.0 
-- Pandas 2.2.3 
-- Numpy 2.1.1 
+- Pandas 2.2.3
+- Pyarrow 17.0.0
+- Numpy 2.1.1
 - Matplotlib 3.9.2
